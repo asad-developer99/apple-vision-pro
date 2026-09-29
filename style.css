@@ -28,9 +28,30 @@ body {
   background-color: var(--apple-bg-dark);
   color: #fff;
   overflow-x: hidden;
- /* Hide default cursor for liquid custom cursor */
 }
 
+/* ==========================================================================
+   CUSTOM LIQUID CURSOR
+   ========================================================================== */
+#cursor-dot {
+
+}
+
+#cursor-ring {
+ 
+}
+
+#cursor-text {
+ 
+}
+
+body.cursor-hover #cursor-ring {
+ 
+}
+
+body.cursor-hover #cursor-text {
+ 
+}
 
 /* ==========================================================================
    SCROLL PROGRESS BAR & SPATIAL HUD
