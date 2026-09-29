@@ -1,28 +1,7 @@
 /* ==========================================================================
    AWWWARDS CREATIVE FRONTEND ENGINE - APPLE VISION PRO CLONE
    ========================================================================== */
-(function initCursor() {
-  const dot = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  const isFine = window.matchMedia('(pointer: fine)').matches;
-  if (!dot || !ring || !isFine) return;
 
-  let x = 0, y = 0, rx = 0, ry = 0;
-
-  window.addEventListener('mousemove', (e) => {
-    x = e.clientX;
-    y = e.clientY;
-    document.documentElement.classList.add('has-custom-cursor');
-  });
-
-  (function loop() {
-    rx += (x - rx) * 0.15;
-    ry += (y - ry) * 0.15;
-    dot.style.transform = `translate(${x}px, ${y}px)`;
-    ring.style.transform = `translate(${rx}px, ${ry}px)`;
-    requestAnimationFrame(loop);
-  })();
-})();
 // --- DATA DICTIONARY FOR TECH SPEC MODAL ---
 const SPEC_DATA = {
   glass: {

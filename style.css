@@ -33,65 +33,6 @@ body {
 
 
 /* ==========================================================================
-   CUSTOM LIQUID CURSOR
-   ========================================================================== */
-#cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out, background-color 0.2s ease;
-}
-
-#cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.3s ease,
-              border-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(2px);
-}
-
-#cursor-text {
-  font-size: 10px;
-  font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-body.cursor-hover #cursor-ring {
-  width: 70px;
-  height: 70px;
-  background: var(--apple-accent-glow);
-  border-color: var(--apple-accent);
-}
-
-body.cursor-hover #cursor-text {
-  opacity: 1;
-}
-
-/* ==========================================================================
    SCROLL PROGRESS BAR & SPATIAL HUD
    ========================================================================== */
 .scroll-progress-bar {
@@ -1434,16 +1375,4 @@ nav {
   #page1 > h1, #page2 > h1, #page3 > h1, #page4 > h1, #page6 > h1, #page8 > h1, #page10 > h1, #page12 > h1 {
     font-size: 6vw;
   }
-}
-html.has-custom-cursor,
-html.has-custom-cursor * {
-  cursor: none;
-}
-
-#cursor-dot, #cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
 }
