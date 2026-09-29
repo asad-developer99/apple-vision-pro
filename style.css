@@ -28,8 +28,9 @@ body {
   background-color: var(--apple-bg-dark);
   color: #fff;
   overflow-x: hidden;
-  cursor: none; /* Hide default cursor for liquid custom cursor */
+ /* Hide default cursor for liquid custom cursor */
 }
+
 
 /* ==========================================================================
    CUSTOM LIQUID CURSOR
@@ -1433,4 +1434,16 @@ nav {
   #page1 > h1, #page2 > h1, #page3 > h1, #page4 > h1, #page6 > h1, #page8 > h1, #page10 > h1, #page12 > h1 {
     font-size: 6vw;
   }
+}
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none;
+}
+
+#cursor-dot, #cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
 }

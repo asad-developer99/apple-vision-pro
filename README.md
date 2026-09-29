@@ -1,61 +1,75 @@
-# 🥽 Apple Vision Pro — Interactive Spatial Computing Experience
+<div align="center">
 
-An **Awwwards-grade, cinematic, interactive scrollytelling web application** cloning and elevating the official Apple Vision Pro product showcase. Built with high-performance WebGL, Three.js particle physics, GSAP ScrollTrigger timeline orchestration, smooth momentum scrolling, custom liquid cursor mechanics, and interactive 3D component inspection.
+# 🥽 Apple Vision Pro — Interactive Spatial Experience
 
-> **Developed with ❤️ by [Shan](https://github.com/)**
+**A cinematic, scroll-driven recreation of the Apple Vision Pro product page, built with WebGL, GSAP and smooth momentum scrolling.**
 
----
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000?style=for-the-badge&logo=vercel)](https://apple-vision-pro-mu-amber.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Three.js](https://img.shields.io/badge/Three.js-000?style=for-the-badge&logo=threedotjs)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
 
-## 🌟 Key Interactive Features
+[**View Live Demo →**](https://apple-vision-pro-mu-amber.vercel.app)
 
-### 1. **WebGL Spatial Particle Matrix (Three.js)**
-- Over **400 floating glowing spatial particles** rendered in 3D WebGL canvas space behind the viewport.
-- Real-time mouse tilt and scroll velocity parallax physics.
+<!-- Add a screenshot or GIF here for maximum impact:
+<img src="./docs/preview.gif" alt="Apple Vision Pro preview" width="800" />
+-->
 
-### 2. **Liquid Custom Cursor Physics Engine**
-- Smooth lerp cursor tracking pointer movements with sub-pixel precision.
-- Contextual haptic expansion on interactive elements (`a`, `button`, `.hotspot-pin`, `.slider-handle`) displaying context labels (*"INSPECT"*, *"SLIDE"*, *"VIEW"*).
-
-### 3. **360° Interactive Headset Spin Canvas**
-- High-fps canvas scrubbing through **198 Apple high-resolution image frames** synchronized with scroll depth.
-- Smooth frame interpolation and canvas auto-scaling across display ratios.
-
-### 4. **Interactive Hardware Component Hotspot Inspector**
-- Pulse hotspot pins attached to headset hardware (3D Laminated Glass, Spatial Audio Pods, Precision Light Seal, Solo Knit Head Band).
-- Clicking any pin opens a floating **Apple Glass Specification Modal** with technical tags, detailed descriptions, and stat metrics.
-
-### 5. **Spatial Workspace Before & After Comparison Slider**
-- Interactive dual-image split slider allowing users to drag and compare a standard physical living room against an overlay of floating visionOS spatial 4K applications.
-
-### 6. **Spatial Audio Synthesizer Visualizer**
-- HTML5 Canvas audio visualizer radiating concentric frequency rings from the dual-driver audio pods when toggled.
-
-### 7. **Top Navigation & Real-Time Head-Tracking HUD**
-- Glassmorphic navigation bar with logo, quick section jump pills, and glowing magnetic pre-order CTA.
-- Simulated real-time head-tracking coordinate HUD `X: ... | Y: ... | Z: ...` updating on scroll alongside top gradient scroll progress indicator.
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## 📖 About
 
-- **Core**: HTML5, Vanilla CSS3 (Custom Design System, Glassmorphism, Responsive Media Breakpoints), JavaScript (ES6+ Modules)
-- **3D Graphics & Physics**: [Three.js](https://threejs.org/) (r128)
-- **Scrollytelling & Animation**: [GSAP 3.12](https://greensock.com/gsap/) + [ScrollTrigger](https://greensock.com/scrolltrigger/)
-- **Smooth Momentum Scroll**: [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/)
-- **Icons & Typography**: RemixIcon v3.4, Apple SF Pro Display typography fallbacks
-- **Build Tool / Dev Server**: [Vite](https://vitejs.dev/)
+This project is a front-end showcase that re-imagines Apple's Vision Pro landing page as an immersive **scrollytelling** experience. It combines a 3D particle background, pinned scroll animations, a custom cursor, and interactive product inspection tools, all in vanilla HTML, CSS and JavaScript with no framework required.
+
+> **Disclaimer:** This is an educational / portfolio project. It is not affiliated with or endorsed by Apple Inc.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+| --- | --- |
+| **WebGL particle field** | A Three.js particle system floats behind the page and reacts to mouse tilt and scroll velocity. |
+| **Liquid custom cursor** | A dot + ring cursor with lerp-smoothed tracking. It expands over interactive elements and shows contextual labels such as *INSPECT*, *SLIDE* and *VIEW*. |
+| **360° headset spin** | A canvas-based frame scrubber tied to scroll position for a smooth product rotation. |
+| **Hotspot inspector** | Pulsing pins on the headset (3D laminated glass, spatial audio pod, light seal, head band) open a glassmorphic specification modal. |
+| **Before / after slider** | Drag to compare a physical room with a floating visionOS spatial workspace. |
+| **Spatial audio visualizer** | A canvas visualizer that radiates concentric frequency rings from the audio pods. |
+| **Head-tracking HUD** | A simulated `X / Y / Z` readout that updates as you scroll, plus a scroll progress bar. |
+| **Glass navigation** | A glassmorphic navbar with section pills and a magnetic *Pre-Order* button. |
+| **Smooth scrolling** | Momentum scrolling via Locomotive Scroll, synchronized with GSAP ScrollTrigger. |
+
+---
+
+## 🧰 Tech Stack
+
+- **Markup / Styling:** HTML5, CSS3 (custom design system, glassmorphism, responsive breakpoints), Bootstrap 5.3 utilities
+- **Language:** JavaScript (ES6+)
+- **3D graphics:** [Three.js](https://threejs.org/) `r128`
+- **Animation:** [GSAP](https://gsap.com/) `3.12.2` + ScrollTrigger
+- **Smooth scroll:** [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) `3.5.4`
+- **Icons:** [Remix Icon](https://remixicon.com/) `3.4.0`
+- **Dev server / build:** [Vite](https://vitejs.dev/)
+
+Libraries are loaded from CDNs in `index.html`, so there is nothing extra to configure.
 
 ---
 
 ## 📁 Project Structure
 
-```bash
-apple-vision-pro-clone/
-├── index.html       # Semantic HTML layout, modals, hotspots, & media elements
-├── style.css        # Premium Apple design system, glassmorphism, responsive rules
-├── script.js        # Engine script for Three.js, Locomotive, GSAP, Cursor, & Slider
-├── package.json     # Project dependencies & Vite scripts
-└── README.md        # Project documentation
+```
+apple-vision-pro/
+├── index.html      # Page markup, sections, modal, hotspots, media
+├── style.css       # Design system, glassmorphism, responsive rules
+├── script.js       # Three.js, Locomotive, GSAP, cursor, slider, modal, audio visualizer
+├── package.json    # Scripts and dev dependencies
+├── LICENSE         # MIT license
+└── README.md
 ```
 
 ---
@@ -63,37 +77,87 @@ apple-vision-pro-clone/
 ## 🚀 Getting Started
 
 ### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (v16+ recommended).
 
-### Installation & Local Development
+- [Node.js](https://nodejs.org/) v16 or newer
+- A modern browser with WebGL support (Chrome, Edge, Firefox, Safari)
+- An internet connection (fonts, libraries and media are loaded from CDNs)
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/apple-vision-pro-clone.git
-   cd apple-vision-pro-clone
-   ```
+### Installation
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/asad-developer99/apple-vision-pro.git
+cd apple-vision-pro
 
-3. **Start local development server**:
-   ```bash
-   npm run dev
-   ```
-   Open your browser and navigate to `http://localhost:5173/`.
+# 2. Install dependencies
+npm install
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+# 3. Start the dev server
+npm run dev
+```
+
+Open the local URL printed in the terminal (Vite defaults to `http://localhost:5173`).
+
+### Production build
+
+```bash
+npm run build     # outputs to /dist
+npm run preview   # preview the production build locally
+```
+
+> Don't want Node? Since the page is plain HTML/CSS/JS, you can also serve the folder with any static server, e.g. `npx serve .`
+
+---
+
+## 🛠️ Troubleshooting
+
+**The cursor is frozen or invisible when the page loads**
+
+The page hides the native cursor and draws its own (`#cursor-dot` and `#cursor-ring`). If the custom cursor's JavaScript never runs, for example because an earlier script error stops `script.js`, the native cursor stays hidden and nothing replaces it. Check the browser console (`F12`) for errors, and make sure the cursor code is initialised first and only hides the native cursor once it is actually tracking the mouse.
+
+**Videos or images don't load**
+
+Media is streamed from Apple's CDN. Check your connection or ad-blocker, and note that these URLs may change over time.
+
+**Low frame rate**
+
+Try closing other tabs, enabling hardware acceleration in your browser, or lowering the particle count in `script.js`.
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Self-host optimized media for faster, more reliable loading
+- [ ] Reduced-motion mode (`prefers-reduced-motion`)
+- [ ] Touch-device fallbacks for the custom cursor
+- [ ] Lighthouse performance and accessibility pass
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome.
+
+1. Fork the project
+2. Create your branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m "Add amazing feature"`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-This project is created for educational and portfolio demonstration purposes. All Apple Vision Pro trademarks, product images, and video assets belong to Apple Inc.
+The source code is released under the [MIT License](./LICENSE).
 
-Crafted with passion by **Shan**.
-# apple-vision-pro
+All Apple Vision Pro names, trademarks, images and video assets belong to **Apple Inc.** and are used here for educational and portfolio purposes only.
+
+---
+
+<div align="center">
+
+**Designed & developed with ❤️ by [Asad](https://github.com/asad-developer99)**
+
+If you like this project, please consider giving it a ⭐
+
+</div>
